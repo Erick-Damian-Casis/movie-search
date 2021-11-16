@@ -1,8 +1,9 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export const Movie=({id, title,poster,year})=>{
 
-    return(<a href={`?id=${id}`} className="card">
+    return(<Link to={`/details/${id}`} className="card">
         <div className="card-image">
             <figure className="image">
                 <img src={poster}
@@ -17,5 +18,5 @@ export const Movie=({id, title,poster,year})=>{
                 </div>
             </div>
         </div>
-    </a>)
+    </Link>)
 }

@@ -11,7 +11,6 @@ export const SearchForm =({onResults})=>{
             .then(res=>res.json())
             .then(results=>{
                 const {Search=[],TotalResults=0}=results
-                console.log({Search,TotalResults})
                 onResults(Search)
             })
     }
