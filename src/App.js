@@ -6,6 +6,7 @@ import './App.css';
 import {Home} from "./pages/Home";
 import {Routes, Route} from "react-router-dom";
 import {Details} from "./pages/Details";
+import {NotFound} from "./pages/NotFound";
 
 
 function App() {
@@ -19,6 +20,10 @@ function App() {
             <Route
                     path='/details/:id'
                     element={<Details/>}
+            />
+            <Route
+                    path='/*'
+                    element={<NotFound/>}
             />
         </Routes>
     </div>

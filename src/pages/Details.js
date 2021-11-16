@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import {BackToHome} from "../components/BackToHome"
 
 const API_KEY = "681fd8a0";
 
@@ -19,12 +20,29 @@ export const Details=()=>{
             handleMovie()
             },[])
 
-    return(<div>
-            <h1>{movie.Title}</h1>
-            <img src={movie.Poster} alt=""/>
-            <h3>{movie.Actors}</h3>
-            <h1>{movie.Metascore}</h1>
-            <span>{movie.Plot}</span>
+    
+    return(<div className="box">
+            <article className="media">
+                <div className="media-left">
+                    <figure className="image is-64x64">
+                        <img src={movie.Poster} alt=""/>
+                    </figure>
+                </div>
+                <div className="media-content">
+                    <div className="content">
+                        <h3>{movie.Title}</h3>
+                        <p>
+                            <br/>
+                                <span>{movie.Metascore}</span>
+                            <br/>
+                                <span>{movie.Plot}</span>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <br/>
+            <BackToHome/>
         </div>
+
     )
 }

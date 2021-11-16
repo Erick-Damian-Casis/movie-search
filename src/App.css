@@ -16,3 +16,7 @@
   margin-bottom: 24px;
   width: 48%;
 }
+.description{
+  display: flex;
+  flex-direction: column;
+}
